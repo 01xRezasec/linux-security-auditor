@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linux-security-auditor"
+version = "0.1.0"
+description = "A read-only Linux security auditing tool"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Reza Mahmoudi" }
+]
+keywords = ["linux", "security", "auditing", "ssh"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Security",
+]
+
+[project.scripts]
+linux-security-auditor = "linux_security_auditor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
